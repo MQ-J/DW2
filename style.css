@@ -21,17 +21,17 @@ header h1 {
 }
 
 /*Content*********************/
-main {
-  width: 200px;
-  margin: auto;
-  margin-top: -6rem;
-}
 .subtitle {
   color: lightgreen;
   margin-top: 1rem;
 }
 
 /*Balance************************/
+#balance {
+  width: 200px;
+  margin: auto;
+  margin-top: -6rem;
+}
 .card {
   background: white;
   border-radius: 0.25rem;
@@ -44,12 +44,35 @@ main {
 }
 
 /*Transactions*****************/
+#transaction {
+  width: 300px;
+  margin: auto;
+}
 
+table {
+  width: 100%;
+  border-spacing: 0rem 0.5rem;
+}
+table tr :first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+table tr :last-child {
+  border-radius: 0 1rem 1rem 0;
+}
+table tr:hover {
+  opacity: 1;
+}
+table th {
+  text-align: left;
+}
+table th, td {
+  background: white;
+  padding-left: 0.8rem;
+}
 
 /*Footer***********************/
 footer {
-  text-align: center
-}
-footer p {
-    font-weight: 100;
+  text-align: center;
+  padding-top: 1.5rem;
+  font-weight: 100;
 }
