@@ -20,10 +20,23 @@ header h1 {
   font-weight: 100;
 }
 
+#cash {
+  color: green;
+}
+
 /*Content*********************/
 .subtitle {
   color: lightgreen;
   margin-top: 1rem;
+  
+  /*hide content, except from acessibility*/
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /*Balance************************/
@@ -32,11 +45,18 @@ header h1 {
   margin: auto;
   margin-top: -6rem;
 }
+
 .card {
   background: white;
   border-radius: 0.25rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   margin-bottom: 2rem;
+}
+.card h3 {
+  font-weight: 100;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .card.total {
   background: #49AA26;
@@ -47,6 +67,14 @@ header h1 {
 #transaction {
   width: 300px;
   margin: auto;
+}
+
+#transaction a {
+  color: #3dd705;
+  text-decoration: none;
+}
+#transaction a:hover {
+  color: #2d4a22;
 }
 
 table {
@@ -68,6 +96,12 @@ table th {
 table th, td {
   background: white;
   padding-left: 0.8rem;
+}
+.income {
+  color: #49AA26;
+}
+.expense {
+  color: red;
 }
 
 /*Footer***********************/

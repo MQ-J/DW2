@@ -11,7 +11,9 @@
 <body>
   
   <header>
-    <h1>dev.finance</h1>
+    <h1>
+      dev.finance<a id="cash">$</a>
+    </h1>
   </header>
   
   <main>
@@ -19,23 +21,33 @@
       <h2 class="subtitle">Balanço</h2>
       
       <div class="card">
-        <h3>Entradas</h3>
+        <h3>
+          <span>Entradas</span>
+          <img src="assets/Income.jpg" alt="Imagem de entrada" width="35" height="25">
+        </h3>
         <p>R$ 2097,90</p>
       </div>
       
       <div class="card">
-        <h3>Saídas</h3>
+        <h3>
+          <span>Saídas</span>
+          <img src="assets/Expense.jpg" alt="Imagem de Saída" width="35" height="25">
+        </h3>
         <p>R$ 150,00</p>
       </div>
       
       <div class="card total">
-        <h3>Total</h3>
+        <h3>
+          <span>Total</span>
+          <span>$</span>
+          </h3>
         <p>R$ 972,98</p>
       </div>
     </section>
     
     <section id="transaction">
-      <h2 class="subtitle" href="#">Transações</h2>
+      <h2 class="subtitle">Transações</h2>
+      <a href="#">+ Nova Transação</a>
       
       <table>
         <thead>
@@ -49,18 +61,27 @@
             <th>
               Data
             </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>água</td>
-            <td>-150</td>
+            <td class="expense">-150</td>
             <td>12/03/22</td>
+            <td><img src="assets/minus.jpg" alt="remover transação" width="35" height="25"></td>
           </tr>
           <tr>
             <td>salário</td>
-            <td>3,200</td>
+            <td class="income">3,200</td>
             <td>26/05/22</td>
+            <td><img src="assets/minus.jpg" alt="remover transação" width="35" height="25"></td>
+          </tr>
+          <tr>
+            <td>Internet</td>
+            <td class="expense">-175</td>
+            <td>28/05/22</td>
+            <td><img src="assets/minus.jpg" alt="remover transação" width="35" height="25"></td>
           </tr>
         </tbody>
       </table>
