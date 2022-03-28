@@ -62,6 +62,9 @@ header h1 {
   background: #49AA26;
   color: #f0f2f5;
 }
+#cost {
+  visibility: hidden;
+}
 
 /*Transactions*****************/
 #transaction {
@@ -109,4 +112,21 @@ footer {
   text-align: center;
   padding-top: 1.5rem;
   font-weight: 100;
+}
+
+/*Responsive*******************/
+@media (min-width: 800px) {
+  
+  #balance {
+    width: 470px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 2rem;
+  }
+  
+  #transaction {
+  width: 500px;
+  margin: auto;
+  }
 }
