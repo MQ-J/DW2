@@ -132,6 +132,25 @@ table th, td {
   position: relative;
 }
 
+/*Formulário do modal**********/
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.imput-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#description {
+  width: 75%;
+}
+
+
 /*Footer***********************/
 footer {
   text-align: center;
