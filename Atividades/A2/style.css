@@ -132,23 +132,35 @@ table th, td {
   position: relative;
 }
 
+
 /*Formulário do modal**********/
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.imput-group {
+.input-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  margin-top: 5%;
+}
+.input-group input {
+  border: 0 none;
+  outline: 0;
+}
+#description {
+  width: 100%;
+  margin: 0;
+}
+#botoes {
+  display: flex;
+  flex-direction: row;
+}
+#botoes button {
+  width: 80%;
 }
 
-#description {
-  width: 75%;
-}
 
 
 /*Footer***********************/
