@@ -47,7 +47,7 @@
     
     <section id="transaction">
       <h2 class="subtitle">Transações</h2>
-      <a href="#">+ Nova Transação</a>
+      <a href="#" id="novo">+ Nova Transação</a>
       
       <table>
         <thead>
@@ -88,7 +88,7 @@
     </section>
   </main>
   
-  <div class="modal active">
+ <div id="modal" class="modal ">
     <div class="modalTransacao">
       <div class="form">
         <h3>Nova Transação</h3>
@@ -102,6 +102,10 @@
           </div>
           <div class="input-group">
             <input type="date" name="data" id="data">
+          </div>
+          <div class="input-group">
+            <button type="reset">Cancelar</button>
+            <button type="submit">Salvar</button>
           </div>
         </form>
       </div>
