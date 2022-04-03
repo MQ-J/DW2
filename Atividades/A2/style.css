@@ -128,7 +128,7 @@ table th, td {
 
 .modalTransacao {
   background-color: #f0f2f5;
-  padding: 2.4rem;
+  padding: 1rem;
   position: relative;
 }
 
@@ -167,9 +167,12 @@ table th, td {
 }
 #reset {
   border-color: red;
+  color: red;
 }
 #submit {
   border-color: green;
+  background-color: green;
+  color: #f0f2f5;
 }
 
 
