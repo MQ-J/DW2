@@ -47,7 +47,7 @@
     
     <section id="transaction">
       <h2 class="subtitle">Transações</h2>
-      <a href="#" id="novo">+ Nova Transação</a>
+      <a href="#" id="novo" onclick="Modal.open()">+ Nova Transação</a>
       
       <table>
         <thead>
@@ -97,14 +97,14 @@
             <input type="text" id="description" name="description" placeholder="Descrição">
           </div>
           <div class="input-group">
-            <input type="number" name="valor" id="valor" step="0.01" placeholder="0,00">
+            <input type="number" name="valor" id="valor" step="0.01" placeholder="0.00">
           </div>
           <small>Sinal - (Negativo) para despesas e . (ponto) para casas decimais</small>
           <div class="input-group">
             <input type="date" name="data" id="data">
           </div>
           <div class="input-group" id="botoes">
-            <button type="reset" id="reset">Cancelar</button>
+            <button type="reset" id="reset" onclick="Modal.close()">Cancelar</button>
             <button type="submit" id="submit">Salvar</button>
           </div>
         </form>
