@@ -16,29 +16,34 @@ const Modal = {
 }
 
 /*Transactions ************/
-const transactions =[{
-  id: 1,
+const Transaction = {
+  
+  all: transactions =[{
   description: 'BATATA',
   amount: -50000,
   date: '23/01/2021'
 },
 {
-  id: 2,
   description: 'Luzia',
   amount: -10000,
   date: '23/06/2020'
 },
 {
-  id: 3,
   description: 'Luziodo',
   amount: 50000,
   date: '23/11/2022'
-}]
-const Transaction = {
-  all: transactions,
+}],
+  
   add(transaction) {
     Transaction.all.push(transaction)
+    App.reload()
   },
+  
+  remove(index) {
+    Transaction.all.splice(index, 1)
+    App.reload()
+  },
+  
   incomes() {
     /*count the incomes/entradas*/
     let income = 0
@@ -64,6 +69,7 @@ const Transaction = {
     return Transaction.incomes() + Transaction.expenses()
   }
 }
+
 const DOM = {
   htmlPlace: document.querySelector('#tbody'),
   
@@ -97,6 +103,17 @@ const DOM = {
 }
 
 const Utils = {
+  
+  formatAmount(value) {
+    value = Number(value) * 100
+    return value
+  },
+  
+  formatDate(date) {
+    const splittedDate = date.split("-")
+    return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+  },
+  
   formatCurrency(value) {
     const signal = Number(value) < 0 ? "-" : ""
     value = String(value).replace(/\D/g, "")
@@ -109,10 +126,64 @@ const Utils = {
   }
 }
 
-/******************/
+const Form = {
 
-Transaction.all.forEach((transaction) => {
-  DOM.addTransaction(transaction)
+  description: document.getElementById("description"),
+  amount: document.getElementById("valor"),
+  date: document.getElementById("data"),
+  
+  getValues() {
+    return {
+      description: Form.description.value,
+      amount: Form.amount.value,
+      date: Form.date.value
+    }
+  },
+  
+  validateField() {
+    const {description, amount, date} = Form.getValues()
+    
+    if (description.trim() === "" ||
+    amount.trim() === "" || date.trim() === "") {
+      throw new Error("por favor preencha todos os campos")
+    }
+  },
+  
+  formatValues() {
+    let {description, amount, date} = Form.getValues()
+      
+    amount = Utils.formatAmount(amount)
+    date = Utils.formatDate(date)
+  },
+  
+  submit(event) {
+    event.preventDefault()
+    
+    try {
+      Form.validateField()
+      Form.formatValues()
+      
+      
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+}
+
+const App = {
+  init() {
+    Transaction.all.forEach((transaction) => {
+      DOM.addTransaction(transaction)
 })
 
-DOM.updateCards()
+    DOM.updateCards()
+  },
+  reload() {
+    DOM.clearTransactions()
+    App.init()
+  }
+}
+
+/******************/
+
+App.init()
