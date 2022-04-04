@@ -19,18 +19,18 @@ const Modal = {
 const Transaction = {
   
   all: transactions =[{
-  description: 'BATATA',
-  amount: -50000,
+  description: 'exemplo1',
+  amount: -1,
   date: '23/01/2021'
 },
 {
-  description: 'Luzia',
-  amount: -10000,
+  description: 'exemplo2',
+  amount: 1,
   date: '23/06/2020'
 },
 {
-  description: 'Luziodo',
-  amount: 50000,
+  description: 'teste3',
+  amount: 0,
   date: '23/11/2022'
 }],
   
@@ -154,6 +154,16 @@ const Form = {
       
     amount = Utils.formatAmount(amount)
     date = Utils.formatDate(date)
+    
+    return {
+      description, amount, date
+    }
+  },
+  
+  clearFields() {
+    Form.description.value = ""
+    Form.amount.value = ""
+    Form.date.value = ""
   },
   
   submit(event) {
@@ -161,8 +171,10 @@ const Form = {
     
     try {
       Form.validateField()
-      Form.formatValues()
-      
+      const transaction = Form.formatValues()
+      Transaction.add(transaction)
+      Form.clearFields()
+      Modal.close()
       
     } catch (error) {
       alert(error.message)
