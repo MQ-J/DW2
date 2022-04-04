@@ -98,13 +98,15 @@ table th {
 }
 table th, td {
   background: white;
-  padding-left: 0.8rem;
+  padding-left: 0.3rem;
 }
 .income {
   color: #49AA26;
+  font-size: 16px;
 }
 .expense {
   color: red;
+  font-size: 13px;
 }
 
 /*Modal nova transação*********/
@@ -209,5 +211,8 @@ footer {
   #transaction {
   width: 500px;
   margin: auto;
+  }
+  .expense {
+    font-size: 16px;
   }
 }

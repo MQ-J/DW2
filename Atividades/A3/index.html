@@ -25,7 +25,7 @@
           <span>Entradas</span>
           <img src="assets/income.svg" alt="Imagem de entrada" width="35" height="25">
         </h3>
-        <p>R$ 2097,90</p>
+        <p id="incomeCard">R$ 2097,90</p>
       </div>
       
       <div class="card">
@@ -33,7 +33,7 @@
           <span>Saídas</span>
           <img src="assets/expense.svg" alt="Imagem de Saída" width="35" height="25">
         </h3>
-        <p>R$ 150,00</p>
+        <p id="expenseCard">R$ 150,00</p>
       </div>
       
       <div class="card total">
@@ -41,7 +41,7 @@
           <span>Total</span>
           <img src="assets/total.svg" alt="Imagem de Saída" width="35" height="25">
         </h3>
-        <p>R$ 972,98</p>
+        <p id="totalCard">R$ 972,98</p>
       </div>
     </section>
     
@@ -64,25 +64,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>água</td>
-            <td class="expense">-150</td>
-            <td>12/03/22</td>
-            <td><a href="#"><img src="assets/minus.svg" alt="remover transação" width="35" height="25"></a></td>
-          </tr>
-          <tr>
-            <td>salário</td>
-            <td class="income">3,200</td>
-            <td>26/05/22</td>
-            <td><a href="#"><img src="assets/minus.svg" alt="remover transação" width="35" height="25"></a></td>
-          </tr>
-          <tr>
-            <td>Internet</td>
-            <td class="expense">-175</td>
-            <td>28/05/22</td>
-            <td><a href="#"><img src="assets/minus.svg" alt="remover transação" width="35" height="25"></a></td>
-          </tr>
+        <tbody id="tbody">
         </tbody>
       </table>
     </section>
