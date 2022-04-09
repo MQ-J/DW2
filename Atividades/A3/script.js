@@ -16,23 +16,18 @@ const Modal = {
 }
 
 /*Transactions ************/
+const Storage = {
+  get() {
+    return JSON.parse(localStorage.getItem("dev.finances:transactions")) || []
+  },
+  set(transactions) {
+    localStorage.setItem("de.finances:transaction", JSON.stringify(transactions))
+  }
+}
+
 const Transaction = {
   
-  all: transactions =[{
-  description: 'exemplo1',
-  amount: -1,
-  date: '23/01/2021'
-},
-{
-  description: 'exemplo2',
-  amount: 1,
-  date: '23/06/2020'
-},
-{
-  description: 'teste3',
-  amount: 0,
-  date: '23/11/2022'
-}],
+  all: Storage.get(),
   
   add(transaction) {
     Transaction.all.push(transaction)
@@ -75,11 +70,13 @@ const DOM = {
   
   addTransaction(transaction, index) {
     const tr = document.createElement('tr')
-    tr.innerHTML = DOM.innerHtmlTransaction(transaction)
+    tr.innerHTML = DOM.innerHtmlTransaction(transaction, index)
+    tr.dataset.index = index
+    
     DOM.htmlPlace.appendChild(tr)
   },
   
-  innerHtmlTransaction(transaction) {
+  innerHtmlTransaction(transaction, index) {
     const CSSclass = transaction.amount > 0 ? "income" : "expense"
     const amount = Utils.formatCurrency(transaction.amount)
     
@@ -87,7 +84,7 @@ const DOM = {
       <td>${transaction.description}</td>
       <td class="${CSSclass}">${amount}</td>
       <td>${transaction.date}</td>
-      <td><a href="#"><img src="assets/minus.svg" alt="remover transação" width="35" height="25"></a></td>`
+      <td><a href="#"><img onclick="Transaction.remove(${index})" src="assets/minus.svg" alt="remover transação" width="35" height="25"></a></td>`
     return html
   },
   
@@ -184,11 +181,13 @@ const Form = {
 
 const App = {
   init() {
-    Transaction.all.forEach((transaction) => {
-      DOM.addTransaction(transaction)
+    Transaction.all.forEach((transaction, index) => {
+      DOM.addTransaction(transaction, index)
 })
 
     DOM.updateCards()
+    
+    Storage.set(Transaction.all)
   },
   reload() {
     DOM.clearTransactions()
