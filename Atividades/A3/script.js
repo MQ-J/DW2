@@ -15,6 +15,21 @@ const Modal = {
   }
 }
 
+/*MÁSCARA NO VALOR R$ */
+
+const valor = document.getElementById('valor')
+
+valor.onkeyup = function () {
+  let val = parseInt(valor.value.replace(".",""))
+  numb = val.toString().length
+  switch(numb) {
+  case 1: val = `0.0${val}`; break;
+  case 2: val = `0.${val}`; break;
+  case 3: val = val/100; break;
+  case 4: val = val/10; break;
+  }
+  valor.value = val
+}
 /*Transactions ************/
 const Storage = {
   get() {
