@@ -11,7 +11,7 @@ const Modal = {
   },
   close() {
     /*remove active class in modal*/
-    numbs = []
+    numbs = [] //reseta array de valor do input de preço
     modal.classList.remove("active");
   }
 }
@@ -22,9 +22,15 @@ const valor = document.getElementById('valor')
 let numbs = []
 
 valor.onkeyup = function () {
+  
+  //array de valor recebe número digitado, ou sinal de menos
   numbs.push(window.event.keyCode != 229 ? String.fromCharCode(window.event.keyCode) : "-")
+  
+  //mais variáveis
   let val
   numb = numbs.length
+  
+  //para cada quantidade de algarismos, duas lógicas de máscaras, para numeros negativos e positivos
   switch(numb) {
   case 1: numbs[0] == "-" ? `${numbs[0]}` : val = `0.0${numbs[0]}`; break;
   case 2:
@@ -48,6 +54,8 @@ valor.onkeyup = function () {
     val = `${numbs[0]}${numbs[1]}${numbs[2]}${numbs[3]}.${numbs[4]}${numbs[5]}` : 
     val = `${numbs[0]}${numbs[1]}${numbs[2]}${numbs[3]}.${numbs[4]}${numbs[5]}`;  break;
   }
+  
+  //input de preço recebe a máscara
   valor.value = val
 }
 /*Transactions ************/
