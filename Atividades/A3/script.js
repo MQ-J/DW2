@@ -11,6 +11,7 @@ const Modal = {
   },
   close() {
     /*remove active class in modal*/
+    numbs = []
     modal.classList.remove("active");
   }
 }
@@ -18,15 +19,34 @@ const Modal = {
 /*MÁSCARA NO VALOR R$ */
 
 const valor = document.getElementById('valor')
+let numbs = []
 
 valor.onkeyup = function () {
-  let val = parseInt(valor.value.replace(".",""))
-  numb = val.toString().length
+  numbs.push(window.event.keyCode != 229 ? String.fromCharCode(window.event.keyCode) : "-")
+  let val
+  numb = numbs.length
   switch(numb) {
-  case 1: val = `0.0${val}`; break;
-  case 2: val = `0.${val}`; break;
-  case 3: val = val/100; break;
-  case 4: val = val/10; break;
+  case 1: numbs[0] == "-" ? `${numbs[0]}` : val = `0.0${numbs[0]}`; break;
+  case 2:
+    numbs[0] == "-" ? 
+    val = `${numbs[0]}0.0${numbs[1]}` : 
+    val = `0.${numbs[0]}${numbs[1]}`; break;
+  case 3:
+    numbs[0] == "-" ? 
+    val = `${numbs[0]}0.${numbs[1]}${numbs[2]}` : 
+    val = `${numbs[0]}.${numbs[1]}${numbs[2]}`; break;
+  case 4: 
+    numbs[0] == "-" ? 
+    val = `${numbs[0]}0${numbs[1]}.${numbs[2]}${numbs[3]}` : 
+    val = `${numbs[0]}${numbs[1]}.${numbs[2]}${numbs[3]}`; break;
+  case 5: 
+    numbs[0] == "-" ? 
+    val = `${numbs[0]}${numbs[1]}${numbs[2]}.${numbs[3]}${numbs[4]}` : 
+    val = `${numbs[0]}${numbs[1]}${numbs[2]}.${numbs[3]}${numbs[4]}`; break;
+    case 6:
+    numbs[0] == "-" ? 
+    val = `${numbs[0]}${numbs[1]}${numbs[2]}${numbs[3]}.${numbs[4]}${numbs[5]}` : 
+    val = `${numbs[0]}${numbs[1]}${numbs[2]}${numbs[3]}.${numbs[4]}${numbs[5]}`;  break;
   }
   valor.value = val
 }
