@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>dev.finance</title>
+</head>
+
+<body>
+  
+  <header>
+    <h1>
+      <a id="cash"><img src="assets/logo.svg"></a>
+    </h1>
+  </header>
+  
+  <main>
+    <section id="balance">
+      <h2 class="subtitle">Balanço</h2>
+      
+      <div class="card">
+        <h3>
+          <span>Entradas</span>
+          <img src="assets/income.svg" alt="Imagem de entrada" width="35" height="25">
+        </h3>
+        <p id="incomeCard"></p>
+      </div>
+      
+      <div class="card">
+        <h3>
+          <span>Saídas</span>
+          <img src="assets/expense.svg" alt="Imagem de Saída" width="35" height="25">
+        </h3>
+        <p id="expenseCard"></p>
+      </div>
+      
+      <div class="card total">
+        <h3>
+          <span>Total</span>
+          <img src="assets/total.svg" alt="Imagem de Saída" width="35" height="25">
+        </h3>
+        <p id="totalCard"</p>
+      </div>
+    </section>
+    
+    <section id="transaction">
+      <h2 class="subtitle">Transações</h2>
+      <a href="#" id="novo" onclick="Modal.open()">+ Nova Transação</a>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Descrição
+            </th>
+            <th>
+              valor
+            </th>
+            <th>
+              Data
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </section>
+  </main>
+  
+ <div id="modal" class="modal ">
+    <div class="modalTransacao">
+      <div class="form">
+        <h4>Nova Transação</h4>
+        <form id="newtransaction" action="" onsubmit="Form.submit(event)">
+          <div class="input-group">
+            <input type="text" id="description" name="description" placeholder="Descrição">
+          </div>
+          <div class="input-group">
+            <input type="number" name="valor" id="valor" step="0.01" placeholder="0.00">
+          </div>
+          <p><small>• Sinal - (Negativo) para gastos</small></p>
+          <p><small>• Se errar, clique em cancelar</small></p>
+          <p><small>• Limite de ganho: 9999,99</small></p>
+          <p><small>• Limite de gasto: -999,99</small></p>
+          <div class="input-group">
+            <input type="date" name="data" id="data">
+          </div>
+          <div class="input-group" id="botoes">
+            <button type="reset" id="reset" onclick="Modal.close()">Cancelar</button>
+            <button type="submit" id="submit">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>IFSP-DW2</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

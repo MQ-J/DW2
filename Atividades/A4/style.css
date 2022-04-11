@@ -1,0 +1,218 @@
+/*Global************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f2f5;
+}
+
+/*Header***********************/
+header {
+  background: #2d4a22;
+  padding: 2rem 0 8rem;
+  text-align: center;
+}
+header h1 {
+  color: #f0f2f5;
+  font-weight: 100;
+}
+
+#cash {
+  color: green;
+}
+
+/*Content*********************/
+.subtitle {
+  color: lightgreen;
+  margin-top: 1rem;
+  
+  /*hide content, except from acessibility*/
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*Balance************************/
+#balance {
+  width: 200px;
+  margin: auto;
+  margin-top: -6rem;
+}
+
+.card {
+  background: white;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.card h3 {
+  font-weight: 100;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.card.total {
+  background: #49AA26;
+  color: #f0f2f5;
+}
+#cost {
+  visibility: hidden;
+}
+
+/*Transactions*****************/
+#transaction {
+  width: 300px;
+  margin: auto;
+}
+
+#transaction a {
+  color: #3dd705;
+  text-decoration: none;
+}
+#transaction a:hover {
+  color: #2d4a22;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0rem 0.5rem;
+}
+table tr :first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+table tr :last-child {
+  border-radius: 0 1rem 1rem 0;
+}
+table tr:hover {
+  opacity: 1;
+}
+table th {
+  text-align: left;
+}
+table th, td {
+  background: white;
+  padding-left: 0.3rem;
+}
+.income {
+  color: #49AA26;
+  font-size: 16px;
+}
+.expense {
+  color: red;
+  font-size: 13px;
+}
+
+/*Modal nova transação*********/
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7) ;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  opacity: 0;
+  visibility: hidden;
+}
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+} 
+
+.modalTransacao {
+  width: 70%;
+  max-width: 500px;
+  background-color: #f0f2f5;
+  padding: 1rem;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+
+/*Formulário do modal**********/
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5%;
+}
+.input-group input {
+  border-radius: 0.2rem;
+  border: 0 none;
+  outline: 0;
+}
+#newtransaction small {
+  opacity: 0.4;
+}
+#description {
+  width: 100%;
+  margin: 0;
+}
+#data {
+  width: 100%;
+  background-color: white;
+}
+#botoes {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+#botoes button {
+  width: 80%;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+#reset {
+  border-color: red;
+  color: red;
+}
+#submit {
+  border-color: green;
+  background-color: green;
+  color: #f0f2f5;
+}
+
+
+
+/*Footer***********************/
+footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  font-weight: 100;
+}
+
+/*Responsive*******************/
+@media (min-width: 800px) {
+  
+  #balance {
+    width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: -6;
+    display: flex;
+    /*grid-template-columns: 1fr 1fr 2fr;*/
+    gap: 2rem;
+  }
+  #transaction {
+  width: 500px;
+  margin: auto;
+  }
+  .expense {
+    font-size: 16px;
+  }
+}
