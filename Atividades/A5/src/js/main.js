@@ -1,22 +1,34 @@
+/*
+IMPORTANDO MÓDULOS
+*/
+import { CPF } from "./modules/cpf.js"
+import { DATE } from "./modules/date.js"
+import { FONE } from "./modules/fone.js"
+import { CEP } from "./modules/cep.js"
+
+
+/*
+CHAMANDO FUNÇÕES DAS MÁSCARAS
+*/
 const masks = {
   cpf (value) {
-    return value.replace(/\D/g,'').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})/, '$1-$2').replace(/(-\d{2})\d+?$/, '$1')
+    return CPF(value)
   },
   date (value) {
-    return value.replace(/\D/g,'').replace(/(\d{2})(\d)/, '$1/$2').replace(/(\d{2})(\d)/, '$1/$2').replace(/(\d{4})\d+?$/, '$1')
+    return DATE(value)
   },
   fone (value) {
-    return value.replace(/\D/g, '').replace(/(\d{2})(\d)/, '($1) $2').replace(/(\d{5})(\d)/, '$1-$2').replace(/(-\d{4})(\d+?$)/, '$1')
+    return FONE(value)
   },
   cep (value) {
-    return value.replace(/\D/g, '').replace(/(\d{5})(\d)/, '$1-$2').replace(/(-\d{3})(\d+?$)/, '$1')
+    return CEP(value)
   }
 }
 
 
-
-
-
+/*
+CHAMADA DE CADA INPUT
+*/
 document.querySelectorAll('input').forEach(($input) => {
   const field = $input.dataset.js
   
