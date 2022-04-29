@@ -1,10 +1,15 @@
 /*
-IMPORTANDO MÓDULOS
+IMPORTANDO MÓDULOS DE PREENCHIMENTO
 */
 import { CPF } from "./modules/cpf.js"
 import { DATE } from "./modules/date.js"
 import { FONE } from "./modules/fone.js"
 import { CEP } from "./modules/cep.js"
+
+/*
+ IMPORTANDO MÓDULOS DE VALIDAÇÃO
+*/
+import { validaCPF } from "./modules/cpf.js"
 
 
 /*
@@ -38,5 +43,5 @@ document.querySelectorAll('input').forEach(($input) => {
 })
 
 document.getElementById("button").addEventListener("click",() => {
-  alert("oi")
+    alert(validaCPF(document.getElementById("cpf").value))
 } )
