@@ -43,5 +43,9 @@ document.querySelectorAll('input').forEach(($input) => {
 })
 
 document.getElementById("button").addEventListener("click",() => {
-    alert(validaCPF(document.getElementById("cpf").value))
+    if(validaCPF(document.getElementById("cpf").value)) {
+      alert("tudo certo, parabéns")
+    } else {
+      alert("CPF inválido, desculpa")
+    }
 } )
