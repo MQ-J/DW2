@@ -5,7 +5,7 @@ Reusa código de máscara de CEP
 import { CEPmask } from "./modules/cepmask.js"
 
 
-var cep = document.getElementById("cep")
+const cep = document.getElementById("cep")
 
 cep.addEventListener('input', () => {
     cep.value = CEPmask(cep.value)
@@ -15,11 +15,11 @@ cep.addEventListener('input', () => {
 /******************************
 API de CEP
 */
-import { CEPval } from "./modules/CEPval.js"
+import { getUF } from "./modules/getUF.js"
 
 
-var enviar = document.getElementById("enviar")
-var resp;
+const enviar = document.getElementById("enviar")
+const estado = document.getElementById("estado")
 
 enviar.addEventListener("click", event => {
    
@@ -30,10 +30,10 @@ enviar.addEventListener("click", event => {
     let newcep = cep.value.replace("-", "")
     
     //precisa ser funcao async pra esperar a resposta de outra (await)
-    const defineRua = async () => {
+    const defineUF = async () => {
         //espera a resposta pra definir a variável e continuar a função
-        const rua = await CEPval(newcep)
-        document.getElementById("endereco").innerText = rua
+        const UF = await getUF(newcep)
+        estado.innerText = UF
     }
-    defineRua()
+    defineUF()
 })
