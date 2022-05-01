@@ -1,5 +1,5 @@
 
-/*
+/*************************
 Reusa código de máscara de CEP
 */
 import { CEPmask } from "./modules/cepmask.js"
@@ -12,7 +12,7 @@ cep.addEventListener('input', () => {
   }, false)
 
 
-/*
+/******************************
 API de CEP
 */
 import { CEPval } from "./modules/CEPval.js"
@@ -23,8 +23,10 @@ var resp;
 
 enviar.addEventListener("click", event => {
    
+    //para que o submit não recarregue a página
     event.preventDefault()
-  
+
+    //tira o traço do cep
     let newcep = cep.value.replace("-", "")
     
     //precisa ser funcao async pra esperar a resposta de outra (await)
