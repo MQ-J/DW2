@@ -11,17 +11,20 @@
 
 <body style="background-color: DarkTurquoise">
   
+  <!-- FORMULÁRIO -->
   <fieldset class="border rounded m-3">
-    
+    <legend class="float-none w-auto text-light">⠀Pesquisar⠀</legend>
     <form action="" style="padding: 1rem;">
-      
       <div class="input-group">
         <input type="text" name="cep" id="cep" class="form-control" placeholder="digite o CEP">
         <button type="submit" id="enviar" class="btn btn-outline-light">ver covid</button>
       </div>
-      
     </form>
+  </fieldset>
   
+  <!-- RESULTADO -->
+  <fieldset class="border rounded m-3">
+    <legend class="float-none w-auto text-light">⠀Resultado⠀</legend>
     <div class="text-light p-3 pb-0">
       <span>Estado:</span>
       <span id="estado"></span>
@@ -31,9 +34,9 @@
       <span>N° de casos de covid no Estado:</span>
       <span id="casos"></span>
     </div>
-    
   </fieldset>
   
+  <!-- FOOTER -->
   <fieldset class="border border-dark rounded fixed-bottom m-3">
     <legend class="float-none w-auto">⠀Fontes⠀</legend>
     <a href="https://viacep.com.br/" class="btn btn-outline-dark m-2">ViaCEP</a>
