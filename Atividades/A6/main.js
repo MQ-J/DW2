@@ -13,13 +13,15 @@ cep.addEventListener('input', () => {
 
 
 /******************************
-API de CEP
+API de CEP + Casos Covid
 */
 import { getUF } from "./modules/getUF.js"
+import { getCASES } from "./modules/getCASES.js"
 
 
 const enviar = document.getElementById("enviar")
 const estado = document.getElementById("estado")
+const casos = document.getElementById("casos")
 
 enviar.addEventListener("click", event => {
    
@@ -29,11 +31,17 @@ enviar.addEventListener("click", event => {
     //tira o traço do cep
     let newcep = cep.value.replace("-", "")
     
-    //precisa ser funcao async pra esperar a resposta de outra (await)
-    const defineUF = async () => {
-        //espera a resposta pra definir a variável e continuar a função
-        const UF = await getUF(newcep)
-        estado.innerText = UF
+    //precisa ser funcao async, que é pausada para poder esperar a resposta de outra (await)
+    const UFandCASES = async () => {
+      
+      //recebe o UF
+      const UF = await getUF(newcep)
+      estado.innerText = UF
+      
+      //recebe o numero de casos  
+      const CASES = await getCASES(UF)
+      casos.innerText = CASES
     }
-    defineUF()
+    
+    UFandCASES()
 })
