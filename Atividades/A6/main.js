@@ -21,10 +21,13 @@ var resp;
 
 enviar.addEventListener("click", event => {
    
-    event.PreventDefault()
+    event.preventDefault()
   
     let newcep = cep.value.replace("-", "")
     
-    document.getElementById("endereco").innerText = CEPval(newcep)
-
+    const defineRua = async () => {
+        const rua = await CEPval(newcep)
+        document.getElementById("endereco").innerText = await rua
+    }
+    defineRua()
 })
