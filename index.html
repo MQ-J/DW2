@@ -11,34 +11,64 @@
   <title>Dev</title>
 </head>
 
-<body>
+<body class="bg-dark">
+  
   <h5>Aqui é a pagina geral das minhas atividades da matéria de Desenvolvimento Web 2</h5>
   <p>Atividades de DW2: </p>
-  <ul>
-    <li>
-    <p>Atividade 4</p>
-    <a href="https://mqj.dev.br/Atividades/A4/">Dev Finance</a>
-    </li>
-    <li>
-    <p>Atividade 5</p>
-    <a href="https://mqj.dev.br/Atividades/A5/">Formulário com máscara</a>
-    </li>
-    <li>
-    <p>Atividade 6</p>
-    <a href="https://mqj.dev.br/Atividades/A6/">Chamando API</a>
-    </li>
-    <li>
-    <p>Atividade 7</p>
-    <a href="https://mq-j.github.io/ReactMobile/public/">React Pelo celular</a>
-    </li>
-    <li>
-    <p>Atividade 8</p>
-    <a href="#">em produção</a>
-    </li>
-  </ul>
+  
+  <!--CAROUSSEL DE SITES-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="bg-light w-50 mb-5">
+        <p>Atividade 4</p>
+        <a href="https://mqj.dev.br/Atividades/A4/">Dev Finance</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="bg-light w-50 mb-5">
+        <p>Atividade 5</p>
+        <a href="https://mqj.dev.br/Atividades/A5/">Formulário com máscara</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="bg-light w-50 mb-5">
+        <p>Atividade 6</p>
+        <a href="https://mqj.dev.br/Atividades/A6/">Chamando API</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="bg-light w-50 mb-5">
+        <p>Atividade 7</p>
+        <a href="https://mq-j.github.io/ReactMobile/public/">React Pelo celular</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="bg-light w-50 mb-5">
+        <p>Atividade 8</p>
+        <a href="#">em produção</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
   <!--FOOTER-->
-  <footer class="d-flex bg-transparent justify-content-around fixed-bottom m-3">
+  <footer class="d-flex bg-dark bg-gradient justify-content-around fixed-bottom py-3">
     <!--USER ICON-->
     <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person bg-dark text-light rounded" viewBox="0 0 16 16">
