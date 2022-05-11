@@ -11,26 +11,41 @@
   <title>Dev</title>
 </head>
 
-<body class="bg-dark">
+<body>
   
-  <h5>Aqui é a pagina geral das minhas atividades da matéria de Desenvolvimento Web 2</h5>
-  <p>Atividades de DW2: </p>
+  <!--ABAS-->
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</button>
+      <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false">Home</button>
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    
+    <!--PROFILE-->
+    <div class="tab-pane fade show active bg-light" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"></div>
+    
+    <!--SITES-->
+    <div class="tab-pane fade bg-dark" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <h5>Aqui é a pagina geral das minhas atividades da matéria de Desenvolvimento Web 2</h5>
+      <p>Atividades de DW2: </p>
   
-  <!--CAROUSSEL DE SITES-->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="bg-light w-50 mb-5">
-        <p>Atividade 4</p>
-        <a href="https://mqj.dev.br/Atividades/A4/">Dev Finance</a>
+      <!--CAROUSSEL DE SITES-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
       </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="bg-light w-50 mb-5">
+          <p>Atividade 4</p>
+          <a href="https://mqj.dev.br/Atividades/A4/">Dev Finance</a>
+        </div>
     </div>
     <div class="carousel-item">
       <div class="bg-light w-50 mb-5">
@@ -57,15 +72,17 @@
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!--FOOTER-->
   <footer class="d-flex bg-dark bg-gradient justify-content-around fixed-bottom py-3">
