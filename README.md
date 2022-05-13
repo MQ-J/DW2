@@ -1,2 +1,2 @@
-#npx babel
+# npx babel
 use npx para babel.
