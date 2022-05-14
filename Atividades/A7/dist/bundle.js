@@ -1,8 +1,9 @@
 "use strict";
 
-var _user$address;
+var _React = _interopRequireDefault(require("React"));
 
-var user = {
-  name: 'john'
-};
-console.log((_user$address = user.address) === null || _user$address === void 0 ? void 0 : _user$address.street);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function App() {
+  return /*#__PURE__*/_React["default"].createElement("h1", null, "Funciona!");
+}
