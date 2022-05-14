@@ -1,5 +1,6 @@
 const user = {
-    name: 'john'
+    name: 'john',
+    age: 17
 }
 
 console.log(user.address?.street)
