@@ -1,4 +1,4 @@
-# A7 - Configurar ambiente React-dom
+# Configurar ambiente React-dom (Atividades 7 e 8)
 
 ## bibliotecas e plugins utilizados
 
@@ -19,3 +19,18 @@ use npx para babel e webpack *em qualquer projeto*
 
 ### npm run dev
 para usar Webpack Dev Server com Source Map neste projeto
+
+## Demais anotações
+
+### dev server
+Para contornar o erro do dist não atualizar, a configuração do dev server dentro do webpack.config.js é essa:
+~~~javascript
+devServer: {
+        static: './dist/',
+        hot: false,
+        devMiddleware: {
+            publicPath: '/dist/',
+            writeToDisk: true,
+        },
+    },
+~~~
