@@ -1,6 +1,7 @@
 # Configurar ambiente React-dom (Atividades 7 e 8)
+<hr>
 
-## ![#c5f015] bibliotecas e plugins utilizados
+![](https://img.shields.io/static/v1?label=&message=Bibliotecas/Plugins&color=green)
 
 - webpack dev server
 - webpack source map
@@ -12,23 +13,27 @@
 - runtime: automatic no babel.config.js
 - variável de ambiente: cross-env -D
 
-## ![#1589F0] comandos
+<hr>
 
-### npx babel || npm webpack
+![](https://img.shields.io/static/v1?label=&message=Comandos&color=blue)
+
+- npx babel || npm webpack
 use npx para babel e webpack *em qualquer projeto*
 
-### npm run dev
+- npm run dev
 para usar Webpack Dev Server com Source Map neste projeto
 
-## ![#f03c15] Demais anotações
+<hr>
 
-### dev server
-Para contornar o erro do dist não atualizar, a configuração do dev server dentro do webpack.config.js foi alterada de:
+![](https://img.shields.io/static/v1?label=&message=Anotações&color=orange)
+
+- dev server
+O bundle.js não estava atualizando. então apaguei essa configuração do dev server:
 
 ```diff
-- static: path.resolve(__dirname, 'public')
+! static: path.resolve(__dirname, 'public')
 ```
-Para:
+Eis a nova configuração:
 
 ```javascript
 devServer: {
