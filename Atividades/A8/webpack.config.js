@@ -15,7 +15,12 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     devServer: {
-        static: path.resolve(__dirname, 'public')
+        static: './dist/',
+        hot: false,
+        devMiddleware: {
+            publicPath: '/dist/',
+            writeToDisk: true,
+        },
     },
     plugins: [
         new HtmlWebPackPlugin({
