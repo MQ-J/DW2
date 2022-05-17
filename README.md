@@ -1,6 +1,6 @@
 # Configurar ambiente React-dom (Atividades 7 e 8)
 
-## bibliotecas e plugins utilizados
+## ![#c5f015] bibliotecas e plugins utilizados
 
 - webpack dev server
 - webpack source map
@@ -12,7 +12,7 @@
 - runtime: automatic no babel.config.js
 - variável de ambiente: cross-env -D
 
-## comandos
+## ![#1589F0] comandos
 
 ### npx babel || npm webpack
 use npx para babel e webpack *em qualquer projeto*
@@ -20,11 +20,17 @@ use npx para babel e webpack *em qualquer projeto*
 ### npm run dev
 para usar Webpack Dev Server com Source Map neste projeto
 
-## Demais anotações
+## ![#f03c15] Demais anotações
 
 ### dev server
-Para contornar o erro do dist não atualizar, a configuração do dev server dentro do webpack.config.js é essa:
-~~~javascript
+Para contornar o erro do dist não atualizar, a configuração do dev server dentro do webpack.config.js foi alterada de:
+
+```diff
+- static: path.resolve(__dirname, 'public')
+```
+Para:
+
+```javascript
 devServer: {
         static: './dist/',
         hot: false,
@@ -33,4 +39,4 @@ devServer: {
             writeToDisk: true,
         },
     },
-~~~
+```
