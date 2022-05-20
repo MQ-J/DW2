@@ -1,6 +1,6 @@
-import { ShowApi } from './components/ShowApi'
 import { RepositoryList } from './components/repositoryList'
 import './styles/global.scss'
+import { ListaCli } from './components/ListaCli'
 
 export function App(){
     return(
@@ -10,9 +10,9 @@ export function App(){
         <RepositoryList />
         <hr />
 
-        <h1>Módulo das API's</h1>
+        <h1>Demais módulos</h1>
         <br />
-        <ShowApi />
+        <ListaCli />
         </>
     )
 }
