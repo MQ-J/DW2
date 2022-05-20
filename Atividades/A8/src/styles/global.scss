@@ -8,3 +8,61 @@ body {
     font: 16px "Helvetica Neue"Arial, Helvetica, sans-serif;
     background-color: aliceblue;
 }
+
+.repository-list {
+    background-color: white;
+    padding: 5px;
+    width: 80%;
+    margin-left:auto; margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 20px;
+
+    h4 {
+        text-align: center;
+        border-bottom: 1px solid;
+    }
+    ul {
+        margin-left: 10px;
+        li {
+            p {
+                text-align: justify;
+            }
+            a {
+                padding: 2px;
+                border-radius: 5px;
+            }
+            a:link {
+               text-decoration: none; 
+            }
+            a:hover {
+                background-color: aqua;
+            }
+        }
+    }
+}
+
+.clients {
+    background-color: white;
+    padding: 5px;
+    width: 80%;
+    margin-left:auto; margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 20px;
+
+    h4 {
+        text-align: center;
+        border-bottom: 1px solid;
+    }
+    table {
+        width: 50%;
+        margin:auto;
+
+        th {
+            background-color: aquamarine;
+            padding: 1px;
+        }
+        td {
+            text-align: center;
+        }
+    }
+}
