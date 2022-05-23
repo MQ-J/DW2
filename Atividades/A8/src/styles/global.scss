@@ -9,7 +9,7 @@ body {
     background-color: aliceblue;
 }
 
-.repository-list {
+.card {
     background-color: white;
     padding: 5px;
     width: 80%;
@@ -21,6 +21,10 @@ body {
         text-align: center;
         border-bottom: 1px solid;
     }
+}
+
+.repository-list {
+
     ul {
         margin-left: 10px;
         li {
@@ -35,24 +39,38 @@ body {
                text-decoration: none; 
             }
             a:hover {
-                background-color: aqua;
+                background-color: aquamarine;
             }
         }
     }
 }
 
-.clients {
-    background-color: white;
-    padding: 5px;
-    width: 80%;
-    margin-left:auto; margin-right: auto;
-    margin-bottom: 15px;
-    border-radius: 20px;
+.counter {
 
-    h4 {
-        text-align: center;
-        border-bottom: 1px solid;
+    div {
+        width: 75px;
+        margin-left:auto; margin-right: auto;
+
+        button {
+            cursor: pointer;
+            background-color: aquamarine;
+            padding: 1px;
+            border: 1px solid;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+        }
+        button:hover {
+            background-color: aqua;
+        }
+        button:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
     }
+}
+
+.clients {
+
     table {
         width: 50%;
         margin:auto;
