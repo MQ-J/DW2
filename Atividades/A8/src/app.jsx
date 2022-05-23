@@ -5,7 +5,7 @@ import { ListaCli } from './components/ListaCli'
 export function App(){
     return(
         <>
-        <h1>Módulo das listas:</h1>
+        <h1>Módulos da matéria de DW2:</h1>
         <br />
         <RepositoryList />
         <hr />

@@ -14,7 +14,7 @@ export function ListaCli(){
     }, []);
 
     return (
-        <div className="clients">
+        <div className="card clients">
             <h4>Lista de Clientes</h4>
             <table>
                 <thead>
