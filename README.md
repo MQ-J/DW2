@@ -6,6 +6,7 @@
 - webpack dev server
 - webpack source map
 - html-webpack-plugin
+- react-refresh
 - babel-loader
 - style-loader
 - css-loader
@@ -37,7 +38,7 @@
 ! static: path.resolve(__dirname, 'public')
 ```
 
-* Eis a nova configuração:
+* E copiei essa do StackOverflow:
 
 ```javascript
 devServer: {
@@ -47,5 +48,14 @@ devServer: {
             publicPath: '/dist/',
             writeToDisk: true,
         },
+    },
+```
+
+* Porém para usar o react-refresh, tive que mudar para:
+
+```javascript
+devServer: {
+        static: path.resolve(__dirname, 'public'),
+        hot: true
     },
 ```
