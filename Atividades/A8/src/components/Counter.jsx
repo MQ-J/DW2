@@ -2,10 +2,11 @@ import { useState } from "react"
 
 export function Counter() {
 
+    //imutabilidade
     const [counter, setCounter] = useState(0)
 
     function increment() {
-        setCounter(counter + 1)
+        setCounter(counter + 1) //criando nova varivável
     }
 
     return(
