@@ -1,16 +1,17 @@
 .counter {
 
     div {
-        width: 75px;
+        width: 60px;
         margin-left:auto; margin-right: auto;
 
         button {
             cursor: pointer;
             background-color: aquamarine;
-            padding: 1px;
+            padding: 2px;
             border: 1px solid;
             border-radius: 12px;
             transition-duration: 0.4s;
+            font-size: 18px;
         }
         button:hover {
             background-color: aqua;

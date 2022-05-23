@@ -13,7 +13,7 @@ export function Counter() {
     return(
         <div className="counter">
             <h4>{counter}</h4>
-            <div><button type="button" onClick={increment}>Incrementar</button></div>
+            <div><button type="button" onClick={increment}>Somar</button></div>
         </div>
     )
 }
