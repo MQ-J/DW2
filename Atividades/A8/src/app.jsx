@@ -5,14 +5,15 @@ import { ListaCli } from './components/ListaCli'
 export function App(){
     return(
         <>
-        <h1>Módulos da matéria de DW2:</h1>
-        <br />
-        <RepositoryList />
-        <hr />
+        <div className='sectionA'>
+            <h2>Módulos da matéria de DW2:</h2>
+            <RepositoryList />
+        </div>
 
-        <h1>Demais módulos</h1>
-        <br />
-        <ListaCli />
+        <div className='sectionB'>
+            <h2>Demais módulos</h2>
+            <ListaCli />
+        </div>
         </>
     )
 }

@@ -7,80 +7,35 @@
 body {
     font: 16px "Helvetica Neue"Arial, Helvetica, sans-serif;
     background-color: aliceblue;
+
+    h2 {
+        padding-top: 20px;
+        text-align: center;
+        color:azure;
+    }
+}
+
+.sectionA {
+    background-color: rgba(18, 7, 106, 0.986);
+    padding-bottom: 15px;
+}
+
+.sectionB {
+    background-color: rgb(222, 16, 109);
+    padding-bottom: 15px;
 }
 
 .card {
     background-color: white;
     padding: 5px;
-    width: 80%;
+    width: 60%;
     margin-left:auto; margin-right: auto;
-    margin-bottom: 15px;
+    margin-top: 15px;
     border-radius: 20px;
 
     h4 {
         text-align: center;
         border-bottom: 1px solid;
-    }
-}
-
-.repository-list {
-
-    ul {
-        margin-left: 10px;
-        li {
-            p {
-                text-align: justify;
-            }
-            a {
-                padding: 2px;
-                border-radius: 5px;
-            }
-            a:link {
-               text-decoration: none; 
-            }
-            a:hover {
-                background-color: aquamarine;
-            }
-        }
-    }
-}
-
-.counter {
-
-    div {
-        width: 75px;
-        margin-left:auto; margin-right: auto;
-
-        button {
-            cursor: pointer;
-            background-color: aquamarine;
-            padding: 1px;
-            border: 1px solid;
-            border-radius: 12px;
-            transition-duration: 0.4s;
-        }
-        button:hover {
-            background-color: aqua;
-        }
-        button:active {
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
-    }
-}
-
-.clients {
-
-    table {
-        width: 50%;
-        margin:auto;
-
-        th {
-            background-color: aquamarine;
-            padding: 1px;
-        }
-        td {
-            text-align: center;
-        }
+        margin-bottom: 5px;
     }
 }
