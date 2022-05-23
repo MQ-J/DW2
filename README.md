@@ -7,6 +7,8 @@
 - webpack source map
 - html-webpack-plugin
 - react-refresh
+- types/react-dom e types/react
+- javascript e babel-typescript
 - babel-loader
 - style-loader
 - css-loader
@@ -21,6 +23,7 @@
 * npx ao invés de npm para os comandos:
     * babel
     * webpack
+    * typescript (tsc)
 
 * npm run dev
     * para usar Webpack Dev Server com Source Map neste projeto
