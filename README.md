@@ -7,6 +7,8 @@
 - webpack source map
 - html-webpack-plugin
 - react-refresh
+- types/react-dom e types/react
+- javascript e babel-typescript
 - babel-loader
 - style-loader
 - css-loader
@@ -21,6 +23,7 @@
 * npx ao invés de npm para os comandos:
     * babel
     * webpack
+    * typescript (tsc)
 
 * npm run dev
     * para usar Webpack Dev Server com Source Map neste projeto
@@ -31,6 +34,11 @@
 <hr>
 
 ![](https://img.shields.io/static/v1?label=&message=Anotações&color=orange)
+
+* para transformar JSX para TSX:
+    * crie interfaces
+    * defina os tipos das 'variáveis menores' em questão
+    * se necessário, defina a 'variável maior' como do tipo da interface
 
 * O bundle.js não estava atualizando. então apaguei essa configuração do dev server:
 

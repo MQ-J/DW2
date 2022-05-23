@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import api from "../services/api";
 import '../styles/listaCli.scss'
 
+interface ListaCli{
+    id: number;
+    nome: string;
+    sobrenome: string;
+}
+
 export function ListaCli(){
 
     const [client, setClient] = useState([]);
@@ -26,7 +32,7 @@ export function ListaCli(){
                     </tr>
                 </thead>
                 <tbody>
-                        {client.map((c) => 
+                        {client.map((c: ListaCli) => 
                         <tr key = {c?.id}>
                             <td> {c?.id} </td>
                             <td> {c?.nome}</td>

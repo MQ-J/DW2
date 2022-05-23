@@ -1,14 +1,24 @@
 .repository-list {
 
+    height: 400px;
+    overflow-y: auto;
+
     ul {
         list-style: none;
-        margin-left: 10px;
+        margin-left: 10px; margin-right: 5px;
         li {
+            padding-bottom: 8px;
+            border-bottom: 1px solid;
+
             & + Li {
                 margin-top: 20px;
             }
+            strong {
+                word-break: break-word;
+            }
             p {
-                font-size: 14px;
+                word-break: break-word;
+                font-size: 16px;
                 color: #444;
                 margin-top: 8px;
                 text-align: justify;
