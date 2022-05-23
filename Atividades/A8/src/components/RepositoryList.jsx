@@ -1,6 +1,9 @@
 import { Counter } from "./Counter"
 import { RepositoryItem } from "./RepositoryItem"
 import '../styles/repositories.scss'
+import { useState, useEffect } from "react"
+
+//https://api.github.com/users/mq-j/repos
 
 const repository = [
     {
@@ -18,6 +21,13 @@ const repository = [
 ]
 
 export function RepositoryList() {
+
+    const [repositories, setRepositories] = useState([])
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/mq-j/repos').then(response => response.json()).then(data => setRepositories(data))
+    }, [])
+
     return (
         <>
         <section className="card repository-list">
