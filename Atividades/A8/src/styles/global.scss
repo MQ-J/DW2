@@ -40,3 +40,20 @@ body {
         font-size: 20px;
     }
 }
+
+button {
+    cursor: pointer;
+    background-color: aquamarine;
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    font-size: 18px;
+}
+button:hover {
+    background-color: aqua;
+}
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
