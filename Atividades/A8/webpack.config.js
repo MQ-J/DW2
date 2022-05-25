@@ -16,8 +16,12 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     devServer: {
-        static: path.resolve(__dirname, 'public'),
-        hot: true
+        static: './dist/',
+        hot: true,
+        devMiddleware: {
+            publicPath: '/dist/',
+            writeToDisk: true,
+        },
     },
     plugins: [
         isDevelopment && new ReactRefreshWebpackPlugin(),

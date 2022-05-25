@@ -59,11 +59,4 @@ devServer: {
     },
 ```
 
-* Porém para usar o react-refresh, tive que mudar para:
-
-```javascript
-devServer: {
-        static: path.resolve(__dirname, 'public'),
-        hot: true
-    },
-```
+* Porém para usar o react-refresh, tive que mudar o "hot" para true.

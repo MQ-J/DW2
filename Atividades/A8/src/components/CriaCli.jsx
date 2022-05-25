@@ -36,6 +36,9 @@ export function CriaCli() {
 
     return(
         <div className="card add-clients">
+
+            <h4>Novo Cliente</h4>
+
             <form onSubmit={function (event) {
                 newClient(event);
             }}>
