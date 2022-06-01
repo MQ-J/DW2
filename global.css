@@ -4,11 +4,15 @@
 }
 
 .site {
-      background-color: white;
         border-radius: 12px;
           height: 450px;
             width: 60%;
             }
+ 
+ #A5 {
+   background-image: url("Atividades/A5/src/img/bg.jpg");
+   background-size: cover;
+ }
 
 .describe {
   width: 90%;
