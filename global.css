@@ -1,3 +1,8 @@
+.painel {
+  background-image: url("images/white_rocks.jpg");
+  background-size: cover;
+}
+
 .site {
       background-color: white;
         border-radius: 12px;
