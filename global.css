@@ -19,6 +19,10 @@
    background-size: cover;
  }
 
+#A6 {
+  background-color: DarkTurquoise;
+}
+
 .describe {
   width: 90%;
 }
