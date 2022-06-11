@@ -12,9 +12,9 @@ export function WidgetForm() {
       <p>hello word</p>
       
       <footer className="text-xl text-neutral-400">
-        Feito com ❤️ pela
+        Feito com ❤️ pela 
         <a className="underline underline-offset-2" href="https://rocketseat.com.br">
-          Rocketseat
+           Rocketseat
         </a>
       </footer>
     </div>
