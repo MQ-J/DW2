@@ -1,28 +1,26 @@
 import { CloseButton } from './CloseButton'
 
-import bugImageUrl from '../assets/bug.svg'
-import ideaImageUrl from '../assets/idea.svg'
-import thoughtImageUrl from '../assets/thought.svg'
+const mode = import.meta.env.PROD ? 'https://mqj.dev.br/projeto-spa/web/dist/assets' : '../assets'
 
 const feedbackTypes = {
   BUG: {
     title: 'problema',
     image: {
-      source: bugImageUrl,
+      source: mode + '/bug.svg',
       alt: 'Imagem de um inseto',
     },
   },
   IDEA: {
     title: 'Ideia',
     image: {
-      source: ideaImageUrl,
+      source: mode + '/idea.svg',
       alt: 'Imagem de uma lâmpada',
     },
   },
   OTHER: {
     title: 'Outro',
     image: {
-      source: thoughtImageUrl,
+      source: mode + '/thought.svg',
       alt: 'Imagem de um balão de pensamento',
     },
   },
