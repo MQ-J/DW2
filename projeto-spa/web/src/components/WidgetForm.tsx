@@ -1,6 +1,6 @@
 import { CloseButton } from './CloseButton'
 
-const mode = import.meta.env.PROD ? 'https://mqj.dev.br/projeto-spa/web/dist/assets' : '../assets'
+const mode = import.meta.env.PROD ? 'https://mqj.dev.br/projeto-spa/web/src/assets' : '../assets'
 
 const feedbackTypes = {
   BUG: {
