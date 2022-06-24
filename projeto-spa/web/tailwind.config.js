@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
+      transparent: 'transparent',
       zinc: colors.zinc,
       neutral: colors.neutral,
       brand: {
