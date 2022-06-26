@@ -9,9 +9,16 @@ module.exports = {
       zinc: colors.zinc,
       neutral: colors.neutral,
       brand: {
-        500: "#8257e6"
+        300: "#996DFF",
+        500: "#8257e6",
       }
-    }
+    },
+    BorderRadius: {
+      md: '4px'
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar')
+  ],
 }
