@@ -1,5 +1,11 @@
+import { FeedbackList } from "./components/FeedbackList";
 import { Widget } from "./components/widget";
 
 export function App() {
-  return <Widget />
+  return (
+    <>
+      <FeedbackList />
+      <Widget />
+    </>
+  )
 }
