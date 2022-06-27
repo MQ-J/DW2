@@ -10,7 +10,7 @@ interface FeedbackContentStepProps {
     OnFeedbackSend: () => void
 }
 
-export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, OnFeedbackSend}: FeedbackContentStepProps) {
+export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, OnFeedbackSend }: FeedbackContentStepProps) {
     const [screenshot, setScreenshot] = useState<string | null>(null)
     const [comment, setComment] = useState("")
 
@@ -19,23 +19,35 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, O
     function handleSubmitFeedback(event: FormEvent) {
         event.preventDefault()
 
-        console.log({
-            screenshot,
-            comment
-        })
+        const feedback = new FormData();
+        feedback.append("screenshot", screenshot!);
+        feedback.append("comment", comment);
 
-        OnFeedbackSend()
+        fetch(
+            `https://polar-shelf-77439.herokuapp.com/api/spa/sendFeedback`,
+            {
+                body: feedback,
+                method: "post",
+            }
+        ).then((res) => res.json()).then((res) => {
+
+            if (res['connection'] == 'OK') {
+                OnFeedbackSend()
+            } else {
+                alert("erro ao enviar feedback, desculpa :(")
+            }
+        })
     }
 
     return (
         <>
             <header>
-                <button 
-                    type="button" 
+                <button
+                    type="button"
                     className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100"
                     onClick={onFeedbackRestartRequested}
                 >
-                    <ArrowLeft weight="bold" className="w-4 h-4"/>
+                    <ArrowLeft weight="bold" className="w-4 h-4" />
                 </button>
 
                 <span className="text-xl leading-6 flex items-center gap-2">
@@ -47,14 +59,14 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, O
             </header>
 
             <form onSubmit={handleSubmitFeedback} className="my-4 w-full">
-                <textarea 
+                <textarea
                     className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent"
                     placeholder="Conte com detalhes o que está acontecendo..."
                     onChange={event => setComment(event.target.value)}
                 />
 
                 <footer className="flex gap-2 mt-2">
-                    <ScreenshotButton 
+                    <ScreenshotButton
                         screenshot={screenshot}
                         onScreenshotTook={setScreenshot}
                     />
